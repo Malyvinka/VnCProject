@@ -74,20 +74,15 @@ Example response:
   {
     "id": 1,
     "name": "Vanitas",
-    "species": "human"
+    "species": "human",
+    "true_name": null,
+    "malnomen": null,
+    "is_corrupted": false,
+    "abilities": "The Book of Vanitas, expert doctor, agility",
+    "description": "A human who inherited the Blue Moon Vampire's name and grimoire. He uses the book to heal cursed vampires, though he claims his motives are purely out of spite."
   }
 ]
 ```
-
-## Future Plans
-
-* Character detail page
-* Search
-* Filtering
-* Ordering
-* PostgreSQL support
-* Docker support
-* Swagger/OpenAPI documentation
 
 ## License
 
@@ -95,5 +90,3 @@ This project is created for educational purposes.
 
 Inspired by *Vanitas no Carte* by Jun Mochizuki.
 
-```
-```
