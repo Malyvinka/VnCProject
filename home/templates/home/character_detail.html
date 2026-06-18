@@ -1,0 +1,29 @@
+{% extends 'home/base.html' %}
+
+{% block title %}
+Character Detail
+{% endblock %}
+
+{% block content %}
+{% include 'home/components/header.html' %}
+<div class="container detail-page">
+
+    <div class="detail-card">
+        <h1 class="name">{{ character.name }}</h1>
+        <div class="species">{{ character.get_species_display }}</div>
+
+        <div class="json detail-json">
+            <div><span class="key">"true_name"</span> : <span class="value">"{{ character.true_name|default:'Unknown' }}"</span></div>
+            <div><span class="key">"malnomen"</span> : <span class="value">"{{ character.malnomen|default:'None' }}"</span></div>
+            <div><span class="key">"is_corrupted"</span> : <span class="value">{{ character.is_corrupted|yesno:"true,false" }}</span></div>
+            <div><span class="key">"abilities"</span> : <span class="value">"{{ character.abilities|default:'None' }}"</span></div>
+        </div>
+
+        <p class="description-text">{{ character.description }}</p>
+
+        <div class="detail-actions">
+            <a class="button" href="{% url 'character_list' %}">← Back to characters</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

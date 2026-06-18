@@ -1,0 +1,11 @@
+{% load static %}
+<header class="site-header">
+    <div class="header-inner">
+        <div class="logo">
+            vanitas_<span class="blue">api</span>
+        </div>
+        <a class="description endpoint-label" href="{{ current_endpoint_url|default:'/api/characters/' }}">
+            {{ current_endpoint|default:"GET /api/characters/" }}
+        </a>
+    </div>
+</header>

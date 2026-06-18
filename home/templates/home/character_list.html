@@ -1,0 +1,24 @@
+{% extends 'home/base.html' %}
+
+{% block title %}
+Characters
+{% endblock %}
+
+{% block content %}
+{% include 'home/components/header.html' %}
+{% include 'home/components/documentation_hero.html' %}
+<div class="container">
+    <div class="cards">
+        {% for character in page_obj %}
+            {% include 'home/components/card.html' %}
+        {% empty %}
+            <div class="card">
+                <p class="description-text">The Grimoire is empty. No characters found in the database yet.</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% include 'home/components/pagination.html' %}
+</div>
+{% endblock %}
+
