@@ -2,7 +2,7 @@
 
 A simple REST API and web project built with Django and Django REST Framework.
 
-Inspired by foxapi.dev and based on the world of **The Case Study of Vanitas (Vanitas no Carte)**.
+Based on the world of **The Case Study of Vanitas (Vanitas no Carte)**.
 
 ## Features
 
